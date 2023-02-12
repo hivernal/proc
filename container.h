@@ -1,6 +1,8 @@
 #ifndef CONTAINER_H
 #define CONTAINER_H
 
+#include "encryption.h"
+
 namespace encryption_methods {
   struct container {
     enum {MAX_SIZE = 100};
