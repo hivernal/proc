@@ -6,7 +6,7 @@ namespace encryption_methods {
     std::string first_str;
     std::string second_str;
     int step;
-  }
-}
+  };
+} // end of namespace encryption_methods
 
 #endif // CYCLE_H
