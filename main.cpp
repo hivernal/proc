@@ -1,4 +1,5 @@
 #include "container.h"
+
 #include <iostream>
 #include <fstream>
 
@@ -11,12 +12,21 @@ namespace encryption_methods {
 
 int main(int argc, char *argv[]) {
   if (argc != 3) {
-    std::cout << "incorrect command line! \
-                  Waited: command infile outfile" << std::endl;
-    exit(EXIT_FAILURE);
+    std::cout << "incorrect command line! Waited: command infile outfile" 
+              << std::endl;
+    return EXIT_FAILURE;
   }
   std::ifstream in_file(argv[1]);
+  if (!in_file.is_open()) {
+    std::cout << "Error to open input file" << std::endl;
+    return EXIT_FAILURE;
+  }
   std::ofstream out_file(argv[2]);
+  if (!out_file.is_open()) {
+    std::cout << "Error to open output file" << std::endl;
+    return EXIT_FAILURE;
+  }
+
   std::cout << "Start"<< std::endl;
   encryption_methods::container cont;
   encryption_methods::init(cont);
@@ -26,5 +36,7 @@ int main(int argc, char *argv[]) {
   encryption_methods::clear(cont);
   out_file << "Empty container. " << std::endl;
   std::cout << "Stop"<< std::endl;
+  in_file.close();
+  out_file.close();
   return EXIT_SUCCESS;
 }

@@ -9,6 +9,6 @@ namespace encryption_methods {
     int len;
     void* array[MAX_SIZE];
   };
-} // end of namespace encryption_methods
+} // namespace encryption_methods
 
 #endif // CONTAINER_H

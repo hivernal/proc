@@ -6,8 +6,7 @@ namespace encryption_methods {
   }
 
   void clear(container& cont) {
-    for (int i; i < cont.len; ++i)
-      delete (encryption*) cont.array[i];
-    cont.len = 0;
+    while(cont.len > 0)
+      delete (encryption*) cont.array[--cont.len];
   }
-}
+} // namespace encryption_methods

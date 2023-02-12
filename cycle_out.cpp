@@ -1,10 +1,11 @@
 #include "cycle.h"
+
 #include <fstream>
 
 namespace encryption_methods {
-  void out(cycle& encryption, std::ofstream& out_file) {
-    out_file << "Cycle method: step = " << encryption.step 
-             << "; first string = " << encryption.first_str
-             << "; second string = " << encryption.second_str << std::endl;
+  void out(cycle& encr, std::ofstream& out_file) {
+    out_file << "Cycle method: step = " << encr.step 
+             << "; first string = " << encr.first_str
+             << "; second string = " << encr.second_str << std::endl;
   }
-}
+} // namespace encryption_methods

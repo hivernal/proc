@@ -9,6 +9,6 @@ namespace encryption_methods {
     std::string second_str;
     int step;
   };
-} // end of namespace encryption_methods
+} // namespace encryption_methods
 
 #endif // CYCLE_H

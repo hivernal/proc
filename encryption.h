@@ -12,13 +12,13 @@ namespace encryption_methods {
 
   struct r_encryption {
     int key;
-    replacing encryption;
+    replacing encr;
   };
 
   struct c_encryption {
     int key;
-    cycle encryption;
+    cycle encr;
   };
-}
+} // namespace encryption_methods
 
 #endif // ENCRYPTION_H
