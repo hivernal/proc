@@ -1,6 +1,8 @@
 #ifndef REPLACING_H
 #define REPLACING_H
 
+#include <string>
+
 namespace encryption_methods {
   struct replacing {
     std::string first_str;

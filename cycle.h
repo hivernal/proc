@@ -1,6 +1,8 @@
 #ifndef CYCLE_H
 #define CYCLE_H
 
+#include <string>
+
 namespace encryption_methods {
   struct cycle {
     std::string first_str;

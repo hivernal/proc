@@ -5,7 +5,7 @@ namespace encryption_methods {
   void in(replacing& encryption, std::ifstream& in_file);
   void in(cycle& encryption, std::ifstream& in_file);
 
-  encryption* in(std::fstream in_file) {
+  encryption* in(std::ifstream& in_file) {
     r_encryption* r_encr;
     c_encryption* c_encr;
     int key;
