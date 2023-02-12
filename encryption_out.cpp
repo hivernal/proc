@@ -9,10 +9,13 @@ namespace encryption_methods {
     switch (encr->key) {
       case encryption::REPLACING:
         out(((r_encryption*) encr)->encryption, out_file);
+        break;
       case encryption::CYCLE:
         out(((c_encryption*) encr)->encryption, out_file);
+        break;
       default:
         out_file << "Incorrect method!" << std::endl;
+        break;
     }
   }
 }

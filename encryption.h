@@ -7,7 +7,7 @@
 namespace encryption_methods {
   struct encryption {
     int key;
-    enum {REPLACING, CYCLE};
+    enum {REPLACING = 1, CYCLE};
   };
 
   struct r_encryption {
@@ -21,4 +21,4 @@ namespace encryption_methods {
   };
 }
 
-#endif // !ENCRYPTION_H
+#endif // ENCRYPTION_H
