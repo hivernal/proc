@@ -5,6 +5,7 @@
 namespace encryption_methods {
   void in(replacing* encr, std::ifstream& in_file);
   void in(cycle* encr, std::ifstream& in_file);
+  void in(strtonum* encr, std::ifstream& in_file);
 
   encryption* in(std::ifstream& in_file) {
     int key;
@@ -14,6 +15,7 @@ namespace encryption_methods {
 
     replacing* r_encr;
     cycle* c_encr;
+    strtonum* s_encr;
     switch (key) {
       case encryption::REPLACING:
         r_encr = new replacing;
@@ -25,6 +27,11 @@ namespace encryption_methods {
         c_encr->key = encryption::CYCLE;
         in(c_encr, in_file);
         return (encryption*) c_encr;
+      case encryption::STRTONUM:
+        s_encr = new strtonum;
+        s_encr->key = encryption::STRTONUM;
+        in(s_encr, in_file);
+        return (encryption*) s_encr;
       default:
         return 0;
     }
