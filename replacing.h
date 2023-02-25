@@ -8,6 +8,7 @@ namespace encryption_methods {
     int key;
     std::string first_str;
     std::string second_str;
+    std::string owner;
   };
 } // namespace encryption_methods
 

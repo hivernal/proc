@@ -9,6 +9,7 @@ namespace encryption_methods {
     std::string first_str;
     std::string second_str;
     int step;
+    std::string owner;
   };
 } // namespace encryption_methods
 
