@@ -9,16 +9,6 @@ namespace encryption_methods {
     int key;
     enum {REPLACING = 1, CYCLE};
   };
-
-  /* struct r_encryption {
-    int key;
-    replacing encr;
-  };
-
-  struct c_encryption {
-    int key;
-    cycle encr;
-  }; */
 } // namespace encryption_methods
 
 #endif // ENCRYPTION_H
