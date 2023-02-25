@@ -3,16 +3,16 @@
 #include <fstream>
 
 namespace encryption_methods {
-  void out(replacing& encr, std::ofstream& out_file);
-  void out(cycle& encr, std::ofstream& out_file);
+  void out(const replacing& encr, std::ofstream& out_file);
+  void out(const cycle& encr, std::ofstream& out_file);
 
-  void out(encryption* en, std::ofstream& out_file) {
+  void out(const encryption* en, std::ofstream& out_file) {
     switch (en->key) {
       case encryption::REPLACING:
-        out(((r_encryption*) en)->encr, out_file);
+        out(*(replacing*) en, out_file);
         break;
       case encryption::CYCLE:
-        out(((c_encryption*) en)->encr, out_file);
+        out(*(cycle*) en, out_file);
         break;
       default:
         out_file << "Incorrect method!" << std::endl;

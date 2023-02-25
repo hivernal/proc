@@ -12,18 +12,18 @@ namespace encryption_methods {
     if (in_file.eof())
       return 0;
 
-    r_encryption* r_encr;
-    c_encryption* c_encr;
+    replacing* r_encr;
+    cycle* c_encr;
     switch (key) {
       case encryption::REPLACING:
-        r_encr = new r_encryption;
+        r_encr = new replacing;
         r_encr->key = encryption::REPLACING;
-        in(r_encr->encr, in_file);
+        in(*r_encr, in_file);
         return (encryption*) r_encr;
       case encryption::CYCLE:
-        c_encr = new c_encryption;
+        c_encr = new cycle;
         c_encr->key = encryption::CYCLE;
-        in(c_encr->encr, in_file);
+        in(*c_encr, in_file);
         return (encryption*) c_encr;
       default:
         return 0;

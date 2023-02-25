@@ -7,7 +7,7 @@ namespace encryption_methods {
   void init(container& cont);
   void clear(container& cont);
   void in(container& cont, std::ifstream& in_file);
-  void out(container& cont, std::ofstream& out_file);
+  void out(const container& cont, std::ofstream& out_file);
 }
 
 int main(int argc, char *argv[]) {

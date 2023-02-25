@@ -7,6 +7,6 @@ namespace encryption_methods {
 
   void clear(container& cont) {
     while(cont.len > 0)
-      delete (encryption*) cont.array[--cont.len];
+      delete cont.array[--cont.len];
   }
 } // namespace encryption_methods

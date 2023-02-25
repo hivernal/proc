@@ -7,7 +7,7 @@ namespace encryption_methods {
   struct container {
     enum {MAX_SIZE = 100};
     int len;
-    void* array[MAX_SIZE];
+    encryption* array[MAX_SIZE];
   };
 } // namespace encryption_methods
 
