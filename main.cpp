@@ -8,6 +8,7 @@ namespace encryption_methods {
   void clear(container& cont);
   void in(container& cont, std::ifstream& in_file);
   void out(const container& cont, std::ofstream& out_file);
+  void out_filtered(const container& cont, int type, std::ofstream& out_file);
 }
 
 int main(int argc, char *argv[]) {
@@ -32,6 +33,7 @@ int main(int argc, char *argv[]) {
   encryption_methods::init(cont);
   encryption_methods::in(cont, in_file);
   out_file << "Filled container. " << std::endl;
+  encryption_methods::out_filtered(cont, 1, out_file);
   encryption_methods::out(cont, out_file);
   encryption_methods::clear(cont);
   out_file << "Empty container. " << std::endl;
