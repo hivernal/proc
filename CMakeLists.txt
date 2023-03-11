@@ -7,6 +7,6 @@ set(CMAKE_BUILD_TYPE Debug)
 set(SOURCE main.cpp replacing_in.cpp  replacing_out.cpp cycle_in.cpp  
            cycle_out.cpp  encryption_in.cpp  encryption_out.cpp  
            container_constr.cpp container_in.cpp container_out.cpp
-           strsize.cpp)
+           strsize.cpp sort.cpp)
 
 add_executable(container ${SOURCE})
